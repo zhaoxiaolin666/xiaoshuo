@@ -1,0 +1,52 @@
+<!--pages/search/search.wxml-->
+<view class="searchtop">
+	<view class="searchleft">
+		<image src="../../images/search.png" style="height:40rpx;width:40rpx;padding-right:20rpx;"></image>
+	</view>
+	<view>
+		<input auto-focus placeholder="请输入书名或者作者名" class="ipt" bindconfirm="onSearch" bindinput="Search" />
+	</view>
+</view>
+<!-- 搜索前 -->
+<view wx:if="{{flag===false}}">
+	<view style="display:flex;justify-content: space-around;padding:10rpx;">
+		<view>大家都在搜</view>
+		<view style="display:flex;" bindtap="clicktab">
+			<view>
+				<image src="../../images/Refresh.png" style="width:50rpx;height:50rpx;"></image>
+			</view>
+			<view>换一换</view>
+		</view>
+	</view>
+	<view style="display:flex;flex-wrap:wrap;">
+		<view wx:for='{{newHotWords}}' wx:key='index'>
+			<view class="search" style="background-color:{{randomColorArr[index]}}" bindtap="gotodetail" data-id='{{item}}'>{{item.word}}</view>
+		</view>
+	</view>
+	<view style="display:flex;justify-content: space-between;padding:20rpx 30rpx;" bindtap="delhistory">
+		<view>搜索历史</view>
+		<view style="display:flex;">
+			<view>
+				<image src="../../images/del.png" style="height:40rpx;width:40rpx;"></image>
+			</view>
+			<view>清空</view>
+		</view>
+	</view>
+	<view style="display:flex; flex-wrap:wrap;padding:0 30rpx;">
+		<view wx:for="{{history111}}" wx:key="index" class="history" bindtap="tabhistory" data-id="{{item}}">{{item}}</view>
+	</view>
+</view>
+<!-- 搜索后 -->
+<view wx:for='{{books}}' wx:key='index' wx:if="{{flag===true}}">
+	<view class="books">
+		<view bindtap="gotodetail111" data-id='{{item._id}}'>
+			<image src="https://statics.zhuishushenqi.com{{item.cover}}" style="height:300rpx;width:200rpx;"></image>
+		</view>
+		<view class="seeing">
+			<view class="title">{{item.title}}</view>
+			<view class="author">{{item.author}}</view>
+			<view class="shortIntro">{{item.shortIntro}}</view>
+			<view class="latelyFollower">最近收藏:{{item.latelyFollower}}</view>
+		</view>
+	</view>
+</view>

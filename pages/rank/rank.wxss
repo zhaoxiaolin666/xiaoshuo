@@ -1,0 +1,55 @@
+/* pages/rank/rank.wxss */
+.bookcity {
+  display: flex;
+  justify-content: space-around;
+  padding: 4rpx 0;
+  background-color: #f2f2f2;
+  position: fixed;
+  width: 100%;
+}
+
+.bookcity1,
+.bookcity2,
+.bookcity3 {
+  text-align: center;
+  padding: 15rpx 5rpx;
+}
+
+.active {
+  border-bottom: 5rpx solid red;
+}
+.books {
+  padding: 15rpx;
+  border-bottom: 1rpx solid #f0f0f0;
+  display: flex;
+}
+.seeing{
+  height:300rpx;
+  padding-left:20rpx;
+  position: relative;
+}
+.title {
+  font-weight: 600;
+  margin-bottom: 10rpx;
+  color:#333333;
+}
+
+.author {
+  font-size: 28rpx;
+  color: #aaaaaa;
+  margin-bottom: 10rpx;
+}
+.shortIntro {
+  font-size: 28rpx;
+  color: #aaaaaa;
+  height: 120rpx;
+  line-height: 30rpx; 
+  display: -webkit-box;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+}
+
+

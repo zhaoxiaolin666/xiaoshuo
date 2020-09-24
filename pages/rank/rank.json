@@ -1,0 +1,7 @@
+{
+  "usingComponents": {},
+  "navigationBarBackgroundColor": "#CB1C36",
+  "navigationBarTitleText": "排行",
+  "navigationBarTextStyle":"white",
+  "enablePullDownRefresh": true
+}

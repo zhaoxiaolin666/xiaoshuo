@@ -1,0 +1,7 @@
+<!--pages/catalog/catalog.wxml-->
+<view>
+	<view style="text-align:center;font-size:50rpx;font-weight:500;">全部目录</view>
+	<view wx:for="{{allchapters}}" wx:key="index">
+		<view style="padding:20rpx 50rpx;border-bottom:1rpx solid #f9f9f9;" data-num="{{index}}" bindtap="choice">{{item}}</view>
+	</view>
+</view>

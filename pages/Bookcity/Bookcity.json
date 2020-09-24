@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "classification":"../../components/classification/classification",
+    "Ranking":"../../components/Ranking/Ranking"
+  },
+  "navigationBarBackgroundColor": "#CB1C36",
+    "navigationBarTitleText": "书城",
+    "navigationBarTextStyle":"white",
+    "enablePullDownRefresh": true
+}

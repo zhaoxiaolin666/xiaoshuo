@@ -1,0 +1,45 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/Bookcity/Bookcity",
+    "pages/search/search",
+    "pages/detail/detail",
+    "pages/minor/minor",
+    "pages/rank/rank",
+    "pages/read/read",
+    "pages/help/help",
+    "pages/catalog/catalog"
+
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#f48",
+    "navigationBarTitleText": "微信小程序",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#ccc",
+    "selectedColor": "#f48",
+    "list": [{
+        "pagePath": "pages/index/index",
+        "text": "书架",
+        "iconPath": "images/bookshelf.png",
+        "selectedIconPath": "images/bookshelf-active.png"
+      },
+      {
+        "pagePath": "pages/Bookcity/Bookcity",
+        "text": "书城",
+        "iconPath": "images/Bookcity.png",
+        "selectedIconPath": "images/Bookcity-active.png"
+      },
+      {
+        "pagePath": "pages/search/search",
+        "text": "搜索",
+        "iconPath": "images/search.png",
+        "selectedIconPath": "images/search-active.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

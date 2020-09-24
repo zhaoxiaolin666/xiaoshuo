@@ -1,0 +1,11 @@
+<!--components/Ranking/Ranking.wxml-->
+<view>
+	<view wx:for='{{rankmale}}' wx:key="index" class="male">
+		<view style="display:flex;" bindtap="clickrankInfo" data-id="{{item._id}}">
+			<view style="padding-left:20rpx;">
+				<image src="https://statics.zhuishushenqi.com{{item.cover}}" style="width:40rpx;height:40rpx"></image>
+			</view>
+			<view style="padding-left:10rpx;">{{item.title}}</view>
+		</view>
+	</view>
+</view>

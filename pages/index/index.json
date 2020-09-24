@@ -1,0 +1,7 @@
+{
+  "usingComponents": {},
+  "navigationBarBackgroundColor": "#CB1C36",
+    "navigationBarTitleText": "小爱小说",
+    "navigationBarTextStyle":"white",
+    "enablePullDownRefresh": true
+}

@@ -1,0 +1,82 @@
+/* pages/search/search.wxss */
+.search {
+  padding: 20rpx;
+  margin: 20rpx;
+  color: #f9f9f9;
+  border-radius: 10rpx;
+}
+
+.ipt {
+  width: 400rpx;
+  height: 80rpx;
+  border-top-right-radius: 15rpx;
+  border-bottom-right-radius: 15rpx;
+  background-color: #f2f2f2;
+  margin: 30rpx 0;
+}
+
+.searchtop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.searchleft {
+  width: 200rpx;
+  padding: 20rpx 0;
+  text-align: right;
+  height: 40rpx;
+  background: #f2f2f2;
+  border-top-left-radius: 15rpx;
+  border-bottom-left-radius: 15rpx;
+}
+.seeing{
+  height:300rpx;
+  padding-left:20rpx;
+  position: relative;
+}
+.books {
+  padding: 15rpx;
+  border-bottom: 1rpx solid #f0f0f0;
+  display: flex;
+}
+
+.title {
+  font-weight: 600;
+  margin-bottom: 10rpx;
+  color:#333333;
+}
+
+.author {
+  font-size: 28rpx;
+  color: #aaaaaa;
+  margin-bottom: 10rpx;
+}
+
+.shortIntro {
+  font-size: 28rpx;
+  color: #aaaaaa;
+  height: 120rpx;
+  line-height: 30rpx; 
+  display: -webkit-box;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+}
+
+.latelyFollower {
+  font-size: 28rpx;
+  color: orange;
+  text-align: bottom;
+  position: absolute;
+  bottom:0;
+}
+.history{
+  margin-right:10rpx;
+  padding:5rpx 20rpx;
+  background-color: #f0f0f0;
+  color:#222222;
+  border-radius: 20rpx;
+}

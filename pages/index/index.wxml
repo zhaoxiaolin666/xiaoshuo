@@ -1,0 +1,24 @@
+<view>
+	<view class="box">
+		<view>
+			<image src="../../images/edit.png" style="width:50rpx;height:50rpx;" wx:if="{{flag===false}}" bindtap="edit"></image>
+			<image src="../../images/edit-active.png" style="width:50rpx;height:50rpx;" wx:else bindtap="back"></image>
+		</view>
+		<view style="display:flex;">
+			<view class="help" bindtap="gotohelp">帮助</view>
+			<view bindtap="news">
+				<image src="../../images/Refresh.png" style="width:50rpx;height:50rpx;"></image>
+			</view>
+		</view>
+	</view>
+	<view style="margin:50rpx;30rpx;" wx:if="{{books.length===0}}">主人还没有收藏书籍，请去书城收藏书籍吧！</view>
+		<view style="display:flex; justify-content: flex-start;flex-wrap:wrap;" wx:else>
+			<view wx:for="{{books}}" wx:key="index" style="width:33%;">
+				<view style="margin:0 20rpx;" bindtap="gotodetail" data-id="{{item._id}}" class="photo">
+					<image src="https://statics.zhuishushenqi.com{{item.cover}}" style="width:100%;height:320rpx;" class="{{flag===true ? 'xuan' : ''}}" ></image>
+					<image src="../../images/err.png" style="width:50rpx;height:50rpx;" class="err" wx:if="{{flag===true}}" bindtap="del" data-id="{{item._id}}"></image>
+				</view>
+				<view style="text-align:center;font-size:28rpx;color:#333333;">{{item.title}}</view>
+			</view>
+		</view>
+</view>

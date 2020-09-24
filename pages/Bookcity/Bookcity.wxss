@@ -1,0 +1,23 @@
+/* pages/Bookcity/Bookcity.wxss */
+.bookcity {
+  display: flex;
+  justify-content: space-around;
+  padding: 4rpx 0;
+  background-color: #f2f2f2;
+  position: fixed;
+  width: 100%;
+}
+
+.bookcity1,
+.bookcity2 {
+  text-align: center;
+  padding: 15rpx 5rpx;
+}
+
+.active {
+  border-bottom: 5rpx solid red;
+}
+
+.sex {
+  padding: 20rpx;
+}

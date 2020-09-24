@@ -1,0 +1,31 @@
+.box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin:50rpx 30rpx;
+}
+.help{
+  border: 1rpx solid #cccccc;
+  padding:8rpx 15rpx;
+  border-radius: 10rpx;
+  margin-right: 20rpx;
+}
+.photo{
+position: relative;
+}
+.err{
+  position: absolute;
+  top:-25rpx;
+  right:-25rpx;
+}
+@keyframes moveImg {
+  0% {
+    transform: rotate(-6deg);
+  }
+  100% {
+    transform: rotate(6deg);
+  }
+}
+.xuan{
+  animation: moveImg 1s linear infinite 0s alternate;
+}

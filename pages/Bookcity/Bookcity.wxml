@@ -1,0 +1,20 @@
+<view style="overflow: hidden;">
+	<view class="bookcity">
+		<view class="bookcity1 {{active===0 ? 'active' : ''}}" bindtap="clickclass">分类</view>
+		<view class="bookcity2 {{active===1 ? 'active' : ''}}" bindtap="clickrank">排行</view>
+	</view>
+	<view wx:if="{{active===0}}" style="margin-top:80rpx;">
+		<view class="sex" class="sex">男生</view>
+		<classification male='{{male}}' title="male"></classification>
+		<view class="sex" class="sex">女生</view>
+		<classification male='{{female}}' title="female"></classification>
+		<view class="sex" class="sex">出版</view>
+		<classification male='{{press}}' title="press"></classification>
+	</view>
+	<view wx:else style="margin-top:80rpx;">
+		<view class="sex" class="sex">男生</view>
+		<Ranking rankmale='{{rankfemale}}'></Ranking>
+		<view class="sex" class="sex">女生</view>
+		<Ranking rankmale='{{rankmale}}'></Ranking>
+	</view>
+</view>

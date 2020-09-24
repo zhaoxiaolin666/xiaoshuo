@@ -1,0 +1,26 @@
+/* pages/read/read.wxss */
+.top{
+  font-size: 40rpx;
+  font-weight: 600;
+  text-align: center;
+  padding:30rpx 0;
+}
+.readbox{
+  width: 100vw;
+  height:100vh;
+  background-color: #eeeeee;
+}
+.topbox{
+  width: 100vw;
+  height: 100vh;
+}
+.bottom{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding:20rpx 0;
+  background-color: #C1AABC;
+  font-weight: 500;
+  position: fixed;
+  bottom:0;
+}

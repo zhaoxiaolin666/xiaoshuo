@@ -1,0 +1,5 @@
+/* components/Ranking/Ranking.wxss */
+.male{
+  border:1rpx solid #f7f7f7;
+  padding:20rpx 0;
+}

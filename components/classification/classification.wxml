@@ -1,0 +1,11 @@
+<!--components/classification/classification.wxml-->
+<view >
+	<view class="polple">
+		<view wx:for='{{male}}' wx:key="index" class="male">
+			<view style="text-align:center;" bindtap="tabgetMinor" data-major="{{item}}" >
+				<view>{{item.name}}</view>
+				<view style="color:#cccccc;font-size:28rpx;margin-top:10rpx;">{{item.bookCount}}本</view>
+			</view>
+		</view>
+	</view>
+</view>

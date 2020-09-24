@@ -1,0 +1,20 @@
+<!--pages/rank/rank.wxml-->
+<view style="overflow: hidden;">
+	<view class="bookcity">
+  	<view class="bookcity1 {{active===0 ? 'active' : ''}}" bindtap="totalRank">周榜</view>
+		<view class="bookcity2 {{active===1 ? 'active' : ''}}" bindtap="monthRank">月榜</view>
+		<view class="bookcity3 {{active===2 ? 'active' : ''}}" bindtap="allrank">总榜</view>
+  </view>
+  <view wx:for='{{books111}}' wx:key='index' style="margin-top:80rpx;">
+		<view class="books">
+			<view bindtap="gotodetail" data-id='{{item._id}}'>
+				<image src="https://statics.zhuishushenqi.com{{item.cover}}" style="height:300rpx;width:200rpx;"></image>
+			</view>
+			<view class="seeing">
+				<view class="title">{{item.title}}</view>
+				<view class="author">{{item.author}}</view>
+				<view class="shortIntro">{{item.shortIntro}}</view>
+			</view>
+		</view>
+	</view>
+</view>

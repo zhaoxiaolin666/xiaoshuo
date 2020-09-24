@@ -1,0 +1,16 @@
+<!--pages/read/read.wxml-->
+<view class="topbox" bindtap="look">
+	<!-- 标题 -->
+	<view class="top">{{chapter.title}}</view>
+	<!-- 内容 -->
+	<view wx:for="{{cpContent}}" wx:key="index">
+		<view style="text-indent:2em;padding:15rpx 10rpx;">{{item}}</view>
+	</view>
+	<!-- 操作栏 -->
+	<view class="bottom" wx:if="{{show===true}}">
+		<view bindtap="catalog">目录</view>
+		<view bindtap="reduce" >Aa-</view>
+		<view bindtap="add">Aa+</view>
+		<view bindtap="background">背景</view>
+	</view>
+</view>

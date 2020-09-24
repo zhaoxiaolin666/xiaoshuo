@@ -1,0 +1,73 @@
+<!--pages/detail/detail.wxml-->
+<view class="boxdetail">
+	<view style="background:#CB1C36;height:150rpx;"></view>
+	<view class="photo">
+		<image src="https://statics.zhuishushenqi.com{{detail.cover}}" style="height:350rpx;width:250rpx;" bindtap='previewImage' data-src="{{detail.cover}}"></image>
+	</view>
+	<view class="title">{{detail.title}}</view>
+	<view class="author">{{detail.author}}</view>
+	<view class="cont">
+		<view class="nav">
+			<view class="nav1" bindtap="readnow">开始阅读</view>
+			<view class="nav2" bindtap="addbook" wx:if="{{flag===false}}">加入书架</view>
+			<view class="nav3" bindtap="notbook" wx:else>已加入书架</view>
+		</view>
+		<view class="star">
+			<image src="../../images/star-active.png" style="height:60rpx;width:60rpx;" wx:for="{{score}}" wx:key="index"></image>
+			<image src="../../images/star.png" style="height:60rpx;width:60rpx;" wx:for="{{5-score}}" wx:key="index"></image>
+			<text style="padding-top:25rpx;">{{star}}</text>
+		</view>
+		<view class="lastChapte">
+			<view class="lastChapte1">更新至</view>
+			<view class="lastChapte2">{{detail.lastChapter}}</view>
+		</view>
+		<view style="display:flex;justify-content: center;">
+			<view style="width:90%;background:#fff;">
+				<view class="bookcity">
+					<view class="bookcity1 {{active===0 ? 'active' : ''}}" bindtap="clickclass">详情</view>
+					<view class="bookcity2 {{active===1 ? 'active' : ''}}" bindtap="clickrank">评价({{reviews.length}})</view>
+				</view>
+				<!-- 详情 -->
+				<view wx:if="{{active===0}}">
+					<view style="padding:10rpx; font-size:30rpx;color:#333333;">简介:{{detail.longIntro}}</view>
+					<view class="catalog" bindtap="catalog">
+						<view>
+							<image src="../../images/catalog.png" style="height:40rpx;width:40rpx;"></image>
+						</view>
+						<view>总目录</view>
+						<view>({{detail.chaptersCount}}章)</view>
+					</view>
+					<view style="display:flex;justify-content: space-around;padding:20rpx 0;">
+						<view>看过这本书的人还在看</view>
+						<view style="display:flex;" bindtap="clicktab">
+							<view>
+								<image src="../../images/Refresh.png" style="width:50rpx;height:50rpx;"></image>
+							</view>
+							<view>换一换</view>
+						</view>
+					</view>
+					<view style="display:flex;  justify-content: flex-start;padding:20rpx 0;">
+						<view wx:for="{{showbooks}}" wx:key="index" style="width:33%;">
+							<view style="margin: 0 10rpx;" bindtap="gotodetail" data-id="{{item._id}}">
+								<image src="https://statics.zhuishushenqi.com{{item.cover}}" class="booksphoto"></image>
+							</view>
+							<view style="text-align:center;font-size:28rpx;color:#666666;">{{item.title}}</view>
+						</view>
+					</view>
+				</view>
+				<!-- 评价 -->
+				<view wx:else>
+					<view wx:for="{{reviews}}" wx:key="index" style="display:flex;padding:15rpx 5rpx;border-bottom:1rpx solid #f9f9f9;">
+						<view style="padding:10rpx 20rpx 0 10rpx;">
+						<image src="https://statics.zhuishushenqi.com{{item.author.avatar}}" class="head"></image>
+						</view>
+						<view>
+							<view style="color:orange;">{{item.author.nickname}}</view>
+							<view style="font-size:26rpx;color:#999999;">{{item.content}}</view>
+						</view>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>

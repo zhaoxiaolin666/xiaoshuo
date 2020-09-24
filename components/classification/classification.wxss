@@ -1,0 +1,9 @@
+/* components/classification/classification.wxss */
+.polple{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.male{
+  border:1rpx solid #f7f7f7;
+  padding:20rpx 0;
+}
